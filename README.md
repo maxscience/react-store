@@ -1,2 +1,2 @@
 # react-store
-A simple store created with React
+A simple ecommerce frontend store created with React
