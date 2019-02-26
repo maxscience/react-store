@@ -2,12 +2,12 @@ import React from "react";
 import { getFunName } from "../helpers";
 
 class StorePicker extends React.Component {
-  myInput = React.createRef();
+  storeName = React.createRef();
 
   //property goToStore
   goToStore = event => {
     event.preventDefault(); //don't submit the form!
-    this.props.history.push(`/store/${this.myInput.current.value}`); //change the page with react router. We have access to the router since StorePicker is a child
+    this.props.history.push(`/store/${this.storeName.current.value}`); //change the page with react router. We have access to the router since StorePicker is a child
   };
 
   render() {
@@ -17,7 +17,7 @@ class StorePicker extends React.Component {
         <h2>Please enter a store</h2>
         <input
           type="text"
-          ref={this.myInput}
+          ref={this.storeName}
           required
           placeholder="Store Name"
           defaultValue={getFunName()}
